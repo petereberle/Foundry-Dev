@@ -4,7 +4,6 @@ body{
 	margin:25px 0 25px 0;
 	font-family:'Century Gothic', sans-serif;
 	font-size:.9em;
-	overflow: hidden;
 }
 
 a{
@@ -18,7 +17,7 @@ a{
 
 header{
 	display:flex;
-	padding:0 25px 0 25px;
+	padding:0 25px 5px 25px;
 	width:calc(100% - 50px);
 	flex-direction:row;
 	/*border-bottom:solid .012px #bebec1;*/
@@ -37,7 +36,7 @@ header{
 	height:100%;
 	display:flex;
 	align-items:center;
-	justify-content: flex-end;
+	justify-content: space-between;
 }
 
 #hamburger{
@@ -45,8 +44,8 @@ header{
 }
 
 .menu_item{
-	width:35px;
-	height:35px;
+	width:25px;
+	height:25px;
 	padding-right:10px;
 }
 
@@ -62,19 +61,20 @@ header{
 	paint-order: stroke;
 }
 
-.stl{
-	fill: black;
+.social{
+	display:none;
 }
 
-.social{
-	
+
+.stl{
+	fill: black;
 }
 
 /****page content****/
 
 #content{
 	width:calc(100% - 50px);
-	height:calc(100% - 60px);
+	height:calc(100% - 65px);
 	padding:25px;
 	display:flex;
 }
@@ -84,13 +84,11 @@ header{
 	display:block;
 	width:85%;
 	height:100%;
-
 }
 
 .corner{
 	width:25px;
 	height:25px;
-	display:none;
 }
 
 #corner_1, #corner_2, #corner_3, #corner_4{
@@ -121,9 +119,9 @@ header{
 }
 
 #slide_container{
-	/*margin:25px;*/
-	width:calc(100%);
-	height:calc(100%);
+	margin:50px;
+	width:calc(100% - 100px);
+	height:calc(100% - 100px);
 	display:block;
 }
 
@@ -161,21 +159,25 @@ header{
 
 #side_menu_wrapper{
 	top:0;
-	right:-100%;
 	position:absolute;
 	width:100vw;
 	height:100vh;
+	display:none;
 }
 
 #menu_side{
-	position:absolute;
-	right:0;
-	top:0;
-	padding:0 0 0 25px;
-	width:calc(15% - 25px);
-	height:100vh;
-	background:white;
-	border-left:solid .012px #000000;
+position: absolute;
+    left: 0;
+    right: 0;
+    top: 30vh;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    min-width:300px;
+    height: fit-content;
+    /* border-left: solid .012px #000000; */
+    opacity: 0;
     z-index: 5000;
 }
 
@@ -183,32 +185,25 @@ header{
 	position:relative;
 	display:flex;
 	flex-direction: column;
-	justify-content: space-between;
-	list-style: none;
-	margin:0;
-	padding:0;
-	height:100%;
 }
 
 #xit{
 	position:absolute;
 	right:25px;
 	top:25px;
-	width:25px;
-	height:25px;
 }
 
+#menu_inner{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
 
 .slide_menu_item{
 	font-family:'Century Gothic', sans-serif;
 	font-size:30px;
-	text-align: left;
+	text-align: center;
 	padding-bottom:5px;
 	margin-bottom:25px;
 	margin-top:75px;
-	border-bottom:solid .012px #000000;
-}
-
-#social_links{
-	padding-bottom:25px;
 }
