@@ -90,6 +90,17 @@ $('#slides').on("click", function exitExplode(){
 
 });
 
+//Ajax Slide Change
+
+var image = $('#slide_container'),
+	header = $('#prod_heading'),
+	description = $('#prod_description'),
+	artist = $('#artist'),
+	work = $('#work'),
+	year = $('#year'),
+	material = $('#material');
+ 
+	
 
 
 });
