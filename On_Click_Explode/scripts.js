@@ -63,9 +63,9 @@ $('#content').on("click", function explode(){
 	
 			$('#content').css('cursor', 'inherit');
 
+			$('#full_attribution').removeClass('fullscreen');
 
 		}
-
 
 });
 
@@ -91,6 +91,8 @@ $('#slides').on("click", function exitExplode(){
 	$('#slides').css('display', 'none');
 
 	$('#content').css('cursor', 'crosshair');
+
+	$('#full_attribution').addClass('fullscreen');
 
 
 	}

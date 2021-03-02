@@ -186,6 +186,49 @@ header{
 	display:block;
 }
 
+/****full slide attribution****/
+
+#full_attribution{
+	position:absolute;
+	bottom:0;
+	right:0;
+	padding:25px;
+	text-align:right;
+	display:none;
+	color:white;
+	border-bottom:none;
+}
+
+#full_artist{
+	border-bottom:solid 1px white;
+	text-transform: unset;
+}
+
+#full_work{
+	border-bottom:inherit;
+	text-transform: unset;
+	font-style:italic;
+}
+
+#full_year{
+	border-bottom:inherit;
+	text-transform: unset;
+}
+
+#full_material{
+	border-bottom:inherit;
+	text-transform: unset;
+}
+
+.fullscreen{
+	display:block!important;
+	text-transform: unset;
+}
+
+.full{
+	padding:0px!important;
+}
+
 /****menu****/
 
 #side_menu_wrapper{
@@ -269,7 +312,6 @@ header{
 	width:25px;
 	stroke:black;
 	stroke-width:5px;
-	position:absolute;
 	padding:10px;
 	background-color:white;
 	opacity:50%;
@@ -281,11 +323,13 @@ header{
 }
 
 #arrow_left{
+	position:absolute;
 	left:0;
 	top:50%;
 }
 
 #arrow_right{
+	position:absolute;
 	transform:rotate(180deg);
 	right:0;
 	top:50%;
