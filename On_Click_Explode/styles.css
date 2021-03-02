@@ -52,7 +52,7 @@ header{
 
 #ham_svg{
 	stroke:white;
-	stroke-width:3;
+	stroke-width:5;
 }
 
 .menu_item{
@@ -200,7 +200,7 @@ header{
 }
 
 #full_artist{
-	border-bottom:solid 1px white;
+	border-bottom:none;
 	text-transform: unset;
 }
 
@@ -227,6 +227,7 @@ header{
 
 .full{
 	padding:0px!important;
+	font-size:1em!important;
 }
 
 /****menu****/
@@ -315,7 +316,7 @@ header{
 	padding:10px;
 	background-color:white;
 	opacity:50%;
-	transition:opacity ease-in-out .5s;
+	transition:opacity ease-in-out .25s;
 }
 
 .arrow:hover{
@@ -325,12 +326,12 @@ header{
 #arrow_left{
 	position:absolute;
 	left:0;
-	top:50%;
+	bottom:45%;
 }
 
 #arrow_right{
 	position:absolute;
 	transform:rotate(180deg);
 	right:0;
-	top:50%;
+	bottom:45%;
 }
