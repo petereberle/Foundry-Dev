@@ -195,7 +195,7 @@ header{
 	width:calc(100% - 50px);
 	display:flex;
 	flex-direction: row;
-	height:25px;
+	height:35px;
 /*	padding:25px;*/
 	text-align:right;
 	display:none;
@@ -206,7 +206,7 @@ header{
 	background:white;
 	border-top:solid 1px black;
 	padding:0 25px 0 25px;
-	font-size:10px;
+	font-size:12px;
 }
 
 #full_artist{
@@ -270,6 +270,7 @@ header{
 	margin:0;
 	padding:0;
 	height:100%;
+	width:calc(100% - 25px);
 }
 
 #xit{
@@ -321,7 +322,7 @@ header{
 .arrow{
 	width:15px;
 	stroke:black;
-	stroke-width:6px;
+	stroke-width:8px;
 }
 
 /*.arrow:hover{

@@ -9,6 +9,8 @@ body{
 
 a{
 	cursor:pointer;
+	text-decoration: none;
+	color:inherit;
 }
 
 .title{
@@ -186,6 +188,11 @@ header{
 	display:block;
 }
 
+#prod_heading{
+padding-top:0;
+margin-top:0;
+}
+
 /****full slide attribution****/
 
 #full_attribution{
@@ -227,7 +234,7 @@ header{
 
 .full{
 	padding:0px!important;
-	font-size:1em!important;
+	font-size:1.2em!important;
 }
 
 /****menu****/
@@ -261,6 +268,7 @@ header{
 	margin:0;
 	padding:0;
 	height:100%;
+	width:calc(100% - 25px);
 }
 
 #xit{
