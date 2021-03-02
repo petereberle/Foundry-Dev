@@ -10,6 +10,8 @@ $(document).ready(function (){
 
 		$('#content').css('filter', 'blur(5px)');
 
+		$('#menu').css('display', 'none');
+
 	});
 
 	$("#xit").on("click", function(){
@@ -24,6 +26,8 @@ $(document).ready(function (){
 
 		$('#side_menu_wrapper').removeClass("active");
 
+		$('#menu').css('display', 'flex');
+
 	}
 
 	});
@@ -35,12 +39,12 @@ $(document).ready(function (){
 var winHeight = $(window).height() - 50;
 var winWidth = $(window).width() - 50;
 
+var openMenu = $('#side_menu_wrapper').hasClass('active');
+
 $('#content').on("click", function explode(){
 
-	var openMenu = $('#side_menu_wrapper').hasClass('active');
 
-
-	if( !openMenu ) {
+	if( !($('#side_menu_wrapper').hasClass('active')) ) {
 	
 			$('#content').css('position', 'relative');
 			$('#content').animate({padding: '25px'});
@@ -58,6 +62,8 @@ $('#content').on("click", function explode(){
 			$('#slides').css('display', 'block');
 	
 			$('#content').css('cursor', 'inherit');
+
+
 		}
 
 
@@ -86,6 +92,7 @@ $('#slides').on("click", function exitExplode(){
 
 	$('#content').css('cursor', 'crosshair');
 
+
 	}
 
 });
@@ -94,13 +101,77 @@ $('#slides').on("click", function exitExplode(){
 
 var image = $('#slide_container'),
 	header = $('#prod_heading'),
-	description = $('#prod_description'),
+	descrip = $('#prod_description'),
 	artist = $('#artist'),
 	work = $('#work'),
 	year = $('#year'),
 	material = $('#material');
- 
-	
+
+var i = 0;
+
+
+image.css('background-image', 'url(' + slide_pulls[0].image1 + ')');
+
+$('#arrow_left').on("click", function(s){
+
+	trans_slide(-1);
+	s.stopPropagation();
+
+	});
+
+$('#arrow_right').on("click", function(s){
+
+	trans_slide(1);
+	s.stopPropagation();
+
+	});
+
+function trans_slide(direction){
+	if( !($('#side_menu_wrapper').hasClass('active')) ) {
+
+		image.animate({opacity: '1'}, 250, bound_trans(direction));
+
+		function bound_trans(){
+
+				if (direction < 1 && !0){
+					i = (i-1);
+					move(i);
+				}
+
+				if (direction >= 1 && !0){
+					i = (i+1)%slide_pulls.length;
+					move(i);
+				}
+		}
+
+	}
+}
+
+function move(e){
+
+	image.css('background-image', 'url(' + slide_pulls[e].image1 + ')');
+	header.html(slide_pulls[e].header);
+	descrip.children().last('<p>').html(slide_pulls[e].description);
+
+	artist.html(slide_pulls[e].artist);
+	work.html(slide_pulls[e].work);
+	year.html(slide_pulls[e].year);
+	material.html(slide_pulls[e].material);
+
+	image.animate({opacity: '0'}, 100);
+
+}
+
+$(document).keydown(function(e) {
+    switch (e.which) {
+        case 37:
+            e.preventDefault(), trans_slide(-1);
+            break;
+        case 39:
+            e.preventDefault(), trans_slide(1);
+            break;
+    }
+});
 
 
 });

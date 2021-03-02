@@ -10,6 +10,7 @@
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+<script src="slides.js"></script>
 <script src="scripts.js"></script>
 </head>
 <body>
@@ -117,31 +118,33 @@
 			 M76.84,5.32V36.6h14.51v-1.88H78.84V5.32H76.84z M97.77,5.32V36.6h14.51v-1.88H99.76V5.32H97.77z"/>
 </svg>
 		<div id="menu">
-			<a id="slides" class="menu_item">
-				<svg version="1.1" id="slide_reveal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 viewBox="0 0 150 80.17" style="enable-background:new 0 0 150 80.17;" xml:space="preserve" class="menu_item icon" >
-				<style type="text/css">
-					.st1{fill:#FFFFFF;}
-				</style>
-				<rect x="51.06" y="8.24" class="st1" width="95.59" height="62.96"/>
-				<rect x="41.99" y="6.71" class="st1" width="95.59" height="66.75"/>
-				<rect x="29.43" y="5.18" class="st1" width="95.59" height="69.81"/>
-				<rect x="3.75" y="4.05" class="st1" width="103.22" height="72.08"/>
-				</svg>
-			</a>
-			<a id="hamburger" class="menu_item last">
-				<svg version="1.1" id="ham_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve" class="menu_item icon">
-				<style type="text/css">
-				.st0{fill:none;}
-				</style>
-				<g>
-				<line class="bar" x1="17.27" y1="32.18" x2="80.89" y2="32.18"/>
-				<line class="bar" x1="3.06" y1="50.5" x2="95.94" y2="50.5"/>
-				<line class="bar" x1="17.69" y1="68.82" x2="81.31" y2="68.82"/>
-				</g>
-				</svg>
-			</a>
+			<div id="controls">
+				<a id="slides" class="menu_item">
+					<svg version="1.1" id="slide_reveal" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 150 80.17" style="enable-background:new 0 0 150 80.17;" xml:space="preserve" class="menu_item icon" >
+					<style type="text/css">
+						.st1{fill:#FFFFFF;}
+					</style>
+					<rect x="51.06" y="8.24" class="st1" width="95.59" height="62.96"/>
+					<rect x="41.99" y="6.71" class="st1" width="95.59" height="66.75"/>
+					<rect x="29.43" y="5.18" class="st1" width="95.59" height="69.81"/>
+					<rect x="3.75" y="4.05" class="st1" width="103.22" height="72.08"/>
+					</svg>
+				</a>
+				<a id="hamburger" class="menu_item last">
+					<svg version="1.1" id="ham_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve" class="menu_item icon">
+					<style type="text/css">
+					.st0{fill:none;}
+					</style>
+					<g>
+					<line class="bar" x1="17.27" y1="32.18" x2="80.89" y2="32.18"/>
+					<line class="bar" x1="3.06" y1="50.5" x2="95.94" y2="50.5"/>
+					<line class="bar" x1="17.69" y1="68.82" x2="81.31" y2="68.82"/>
+					</g>
+					</svg>
+				</a>
+			</div>
 		</div>
 	</header>
 	<div id="content">
@@ -158,12 +161,35 @@
 			<div class="corner" id="corner_4">
 				<img src="corner.svg">
 			</div>
-			<div id="slide_container" style="background-image:url('Photos/Dancing Pumpkin/5146.1_5MDancing_Pumpkin_ProcessPhotos_044 (1).jpg'); background-size:cover; background-position:center; background-repeat: no-repeat;">
+			<div id="slide_container" style="background-size:cover; background-position:center; background-repeat: no-repeat;">
+			</div>
+
+			<div id="directional_arrows">
+				<a id="arrow_left" class="arrow menu_item icon">
+					<svg version="1.1" class=" menu_item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:none;}
+					</style>
+					<line class="st0" x1="73.02" y1="4.01" x2="26.98" y2="50.04"/>
+					<line class="st0" x1="73.02" y1="95.99" x2="26.98" y2="49.96"/>
+					</svg>
+				</a>
+				<a id="arrow_right" class="menu_item icon arrow">
+					<svg version="1.1" class="menu_item" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+					<style type="text/css">
+						.st0{fill:none;}
+					</style>
+					<line class="st0" x1="73.02" y1="4.01" x2="26.98" y2="50.04"/>
+					<line class="st0" x1="73.02" y1="95.99" x2="26.98" y2="49.96"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 		<div id="info_wrapper">
-			<div id="prod_heading" class="title">Production Stage</div>
 				<div id="prod_description">
+					<p id="prod_heading" class="title">Production Stage</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi pharetra eleifend faucibus. Quisque nisi tortor, lobortis sit amet rutrum ac, scelerisque sed dolor. Vivamus quis ornare quam.Accumsan dignissim bibendum, leo enim hendrerit lectus, a gravida metus est non sem.</p>
 				</div>
 				<div id="attribution">
@@ -172,10 +198,6 @@
 					<div id="year" class="info_header attrib title">2021</div>
 					<div id="material" class="info_header attrib title">Bronze</div>
 				</div>
-				<a>
-
-				</a>
-		</div>
 	</div>
 </body>
 </html>

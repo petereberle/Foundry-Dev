@@ -256,3 +256,37 @@ header{
 	width: calc(100% - 50px) !important;
 	height: calc(100% - 60px) !important;
 }
+
+#directional_arrows{
+
+}
+
+#controls{
+	display:flex;
+}
+
+.arrow{
+	width:25px;
+	stroke:black;
+	stroke-width:5px;
+	position:absolute;
+	padding:10px;
+	background-color:white;
+	opacity:50%;
+	transition:opacity ease-in-out .5s;
+}
+
+.arrow:hover{
+	opacity:100%;
+}
+
+#arrow_left{
+	left:0;
+	top:50%;
+}
+
+#arrow_right{
+	transform:rotate(180deg);
+	right:0;
+	top:50%;
+}
