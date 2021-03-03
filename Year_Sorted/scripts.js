@@ -145,20 +145,47 @@ var i;
 
 for (i = 0; i < slide_pulls.length; i++){
 
-	document.getElementById("archive_menu").innerHTML += "<a id='" + slide_pulls[i].year + "' class='filter'>" + slide_pulls[i].work + "</a>"
+	var work_year = slide_pulls[i].year;
+
+	document.getElementById("archive_menu").innerHTML += "<p class='work_year'>" + work_year + "</p><a class='archive_year' class='filter' slide-id='" + i + "' year-id='" + work_year + "'><div class='thumbnail' style=\"background-image:url('" + slide_pulls[i].image1 + "')\"></div><p class='thumnail_caption'>" + slide_pulls[i].work + "</p></a>"
 
 }
 
 $('.filter').on("click", function(){
 
-	var workTitle = $(this).html();
+	var slideID = $(this).attr('slide-id');
 
-	console.log(workTitle)
+	var r = true;
 
-	var slide_pulls.filter()
+	move(slideID, r);
 
 });
 
+// var archive = $('#archive_menu');
+
+// var archiveCount = archive.length;
+
+// for (c = 0, c < archiveCount, c++){
+
+// 	var children = archive[c].children('archive_year').attr('year-id');
+
+
+
+// 	console.log(children);
+
+// }
+
+
+var tags = [...document.getElementsByClassName('work_year')];
+var texts = new Set(tags.map(x => x.innerHTML));
+tags.forEach(tag => {
+  if(texts.has(tag.innerHTML)){
+    texts.delete(tag.innerHTML);
+  }
+  else{
+    tag.remove()
+  }
+})
 
 $('#arrow_left').on("click", function(s){
 
@@ -196,9 +223,19 @@ function trans_slide(direction){
 	}
 }
 
-function move(e){
+function move(e , r){
 
-	image.animate({opacity: '0'}, 100, function(){
+	if (r === undefined){
+
+		image.animate({opacity: '0'}, 100, translate());
+
+	} else {
+		translate();
+	}
+
+	
+
+	function translate(){
 
 	image.css('background-image', 'url(' + slide_pulls[e].image1 + ')');
 	header.html(slide_pulls[e].header);
@@ -214,7 +251,7 @@ function move(e){
 	yearFull.html(slide_pulls[e].year);
 	materialFull.html(slide_pulls[e].material);
 
-});
+}
 
 }
 
@@ -264,3 +301,6 @@ L.marker([46.06362892338259, -118.36210206931129], {icon: markerIcon}).addTo(map
 
 
 });
+
+//PROJECTS
+

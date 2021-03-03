@@ -40,4 +40,61 @@ var slide_pulls = [
 
 	},
 
+	{
+		image1:'Photos/mutu/mutu_1.jpg',
+		image2:'Photos/mutu/mutu_2.jpg',
+		image3:'Photos/mutu/mutu_3.jpg',
+		id:'mutu',
+		header:'Production Stage',
+		description:'Phasellus tristique lorem elit, vitae tincidunt dui rhoncus sit amet. Quisque scelerisque urna nisi, nec dapibus urna bibendum in. Sed urna diam, posuere porta suscipit quis, malesuada et magna. Sed molestie libero vitae dui condimentum ultrices.',
+		artist:'Wangechi Mutu',
+		work:'The NewOnes, will free Us',
+		year:'2019',
+		material:'Bronze'
+
+	},
+
+	{
+		image1:'Photos/graham/graham_1.jpg',
+		image2:'Photos/graham/graham_2.jpg',
+		image3:'Photos/graham/graham_3.jpg',
+		id:'chandelier',
+		header:'Production Stage',
+		description:'Phasellus tristique lorem elit, vitae tincidunt dui rhoncus sit amet. Quisque scelerisque urna nisi, nec dapibus urna bibendum in. Sed urna diam, posuere porta suscipit quis, malesuada et magna. Sed molestie libero vitae dui condimentum ultrices.',
+		artist:'Rodney Graham',
+		work:'Torqued Chandelier',
+		year:'2019',
+		material:'Steel, Resin'
+
+	},
+
+	{
+		image1:'Photos/barney/barney_1.jpg',
+		image2:'Photos/barney/barney_2.jpg',
+		image3:'Photos/barney/barney_3.jpg',
+		id:'Virgins',
+		header:'Production Stage',
+		description:'Phasellus tristique lorem elit, vitae tincidunt dui rhoncus sit amet. Quisque scelerisque urna nisi, nec dapibus urna bibendum in. Sed urna diam, posuere porta suscipit quis, malesuada et magna. Sed molestie libero vitae dui condimentum ultrices.',
+		artist:'Matthew Barney',
+		work:'Virgins and Diana',
+		year:'2018',
+		material:'Bronze'
+
+	},
+
+	{
+		image1:'Photos/mccarthy/mccarthy_1.jpg',
+		image2:'Photos/mccarthy/mccarthy_2.jpg',
+		image3:'Photos/mccarthy/mccarthy_3.jpg',
+		id:'mccarthy',
+		header:'Production Stage',
+		description:'Phasellus tristique lorem elit, vitae tincidunt dui rhoncus sit amet. Quisque scelerisque urna nisi, nec dapibus urna bibendum in. Sed urna diam, posuere porta suscipit quis, malesuada et magna. Sed molestie libero vitae dui condimentum ultrices.',
+		artist:'Paul McCarthy',
+		work:'Cut UP',
+		year:'2015 - 2017',
+		material:'Resin'
+
+	},
+
+
 ];

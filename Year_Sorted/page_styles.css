@@ -453,3 +453,34 @@ textarea{
 #fake_redirect{
 	display:none;
 }
+
+/***PROJECTS***/
+
+/****ARCHIVE YEAR MENU******/
+
+#archive_menu{
+	padding-top:25px;
+	display:flex;
+	flex-direction:column;
+	overflow-y: scroll;
+	height:100%;
+}
+
+.filter{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:5px;
+}
+
+.work_year{
+	font-weight:bold;
+	letter-spacing:.2em;
+	font-size:.8em!important;
+}
+
+.thumbnail{
+	width:250px;
+	height:200px;
+	background-size:cover;
+	background-position: center;
+}
