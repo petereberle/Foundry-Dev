@@ -185,6 +185,7 @@ position: absolute;
 	position:relative;
 	display:flex;
 	flex-direction: column;
+	border: 1px solid black;
 }
 
 #xit{
@@ -204,6 +205,6 @@ position: absolute;
 	font-size:30px;
 	text-align: center;
 	padding-bottom:5px;
-	margin-bottom:25px;
+	margin-bottom:40px;
 	margin-top:75px;
 }

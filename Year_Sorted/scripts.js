@@ -147,7 +147,7 @@ for (i = 0; i < slide_pulls.length; i++){
 
 	var work_year = slide_pulls[i].year;
 
-	document.getElementById("archive_menu").innerHTML += "<p class='work_year'>" + work_year + "</p><a class='archive_year' class='filter' slide-id='" + i + "' year-id='" + work_year + "'><div class='thumbnail' style=\"background-image:url('" + slide_pulls[i].image1 + "')\"></div><p class='thumnail_caption'>" + slide_pulls[i].work + "</p></a>"
+	document.getElementById("archive_menu").innerHTML += "<p class='work_year'>" + work_year + "</p><a class='filter archive_year' class='filter' slide-id='" + i + "' year-id='" + work_year + "'><div class='thumbnail' style=\"background-image:url('" + slide_pulls[i].image1 + "')\"></div><p class='thumnail_caption'>" + slide_pulls[i].work + "</p></a>"
 
 }
 
@@ -158,6 +158,8 @@ $('.filter').on("click", function(){
 	var r = true;
 
 	move(slideID, r);
+
+	console.log(slideID);
 
 });
 
@@ -278,26 +280,6 @@ $(document).keydown(function(e) {
 //CONTACT
 
 	//MAP
-
-var map = L.map('mapid', {
-    center: [46.06362892338259, -118.36210206931129],
-    zoom: 16,
-    zoomControl: true
-  });   
-
-L.tileLayer('https://api.maptiler.com/maps/toner/{z}/{x}/{y}.png?key=UqsRtrg9BcWIXlx6LquC', {
-	maxZoom: 20,
-//    mapbox://styles/mapbox/satellite-streets-v11
-	accessToken: 'UqsRtrg9BcWIXlx6LquC'
-}).addTo(map);
-
-var markerIcon = L.icon({
-	iconUrl: 'location.svg',
-	iconSize: [38, 95],
-	iconAnchor: [0,0]
-});
-
-L.marker([46.06362892338259, -118.36210206931129], {icon: markerIcon}).addTo(map);
 
 
 });

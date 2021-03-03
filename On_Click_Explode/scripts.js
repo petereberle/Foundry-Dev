@@ -71,6 +71,8 @@ $('#content').on("click", function explode(){
 
 			$('#full_attribution').removeClass('fullscreen');
 
+			$('#thumbnail_gallery').css('display', 'flex');
+
 			pause_slideshow = true;
 
 		}
@@ -102,12 +104,38 @@ $('#slides').on("click", function exitExplode(){
 
 	$('#full_attribution').addClass('fullscreen');
 
+	$('#thumbnail_gallery').css('display', 'none');
+
 	pause_slideshow = false;
 
 
 	}
 
 });
+
+// //Project Archive
+
+// var i;
+
+// for (i = 0; i < slide_pulls.length; i++){
+
+// 	var work_year = slide_pulls[i].year;
+
+// 	document.getElementById("archive_menu").innerHTML += "<p class='work_year'>" + work_year + "</p><a class='filter archive_year' class='filter' slide-id='" + i + "' year-id='" + work_year + "'><div class='thumbnail' style=\"background-image:url('" + slide_pulls[i].image1 + "')\"></div><p class='thumnail_caption'>" + slide_pulls[i].work + "</p></a>"
+
+// }
+
+// $('.filter').on("click", function(){
+
+// 	var slideID = $(this).attr('slide-id');
+
+// 	var r = true;
+
+// 	move(slideID, r);
+
+// 	console.log(slideID);
+
+// });
 
 //Ajax Slide Change
 
@@ -223,7 +251,7 @@ $(document).keydown(function(e) {
 
 var map = L.map('mapid', {
     center: [46.06362892338259, -118.36210206931129],
-    zoom: 16,
+    zoom: 13,
     zoomControl: true
   });   
 
@@ -236,10 +264,24 @@ L.tileLayer('https://api.maptiler.com/maps/toner/{z}/{x}/{y}.png?key=UqsRtrg9BcW
 var markerIcon = L.icon({
 	iconUrl: 'location.svg',
 	iconSize: [38, 95],
-	iconAnchor: [0,0]
+	iconAnchor: [0,5]
 });
 
-L.marker([46.06362892338259, -118.36210206931129], {icon: markerIcon}).addTo(map);
+// L.marker([46.06362892338259, -118.36210206931129], {icon: markerIcon}).addTo(map);
+
+var locations = [
+  ["Main Campus", 46.06362892338259, -118.36210206931129],
+  ["Crating Facility", 46.07190026554796, -118.35182193896028],
+  ["Avery Facility", 46.05659416468007, -118.35979443478293],
+  ["Mold Facility", 46.07484264936125, -118.35028436010276]
+
+];
+
+for (var i = 0; i < locations.length; i++) {
+  marker = new L.marker([locations[i][1], locations[i][2]],{icon: markerIcon})
+    .bindPopup(locations[i][0])
+    .addTo(map);
+}
 
 
 });

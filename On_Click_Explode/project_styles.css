@@ -379,7 +379,7 @@ margin-top:0;
 	justify-content: center;
 }
 
-.contact_links{
+#contact_links{
 	padding-bottom:80px;
 }
 
@@ -407,7 +407,7 @@ margin-top:0;
 	margin-top: 10px !important;
 	border: unset !important;
 	border: solid 2px #e7e7e7 !important;
-	font-family:'Century Gothic', sans-serif;
+	font-family:'Proxima Nova', sans-serif;
 	font-size:.85rem;
 	letter-spacing: .1rem;
 	color:#3b3b43;
@@ -446,26 +446,43 @@ textarea{
 }
 
 #send{
-	font-family:'Century Gothic', sans-serif;
 	cursor:pointer;
 	letter-spacing: .1em;
 	margin-top:5px;
-	color: black;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 1px 6px;
-    border-width: unset;
-    border-style: unset;
-    border: black 1px solid;
-    border-image: unset;
-    transition:all ease-in-out .25s;
-}
-
-#send:hover{
-	background-color:black;
-	color:white;
 }
 
 #fake_redirect{
 	display:none;
+}
+
+/***PROJECTS***/
+
+/****ARCHIVE YEAR MENU******/
+
+#archive_menu{
+	padding-top:25px;
+	display:flex;
+	flex-direction:column;
+	overflow-y: scroll;
+	height:100%;
+}
+
+.filter{
+	display:flex;
+	flex-direction:column;
+	padding-bottom:5px;
+}
+
+.work_year{
+	font-weight:bold;
+	letter-spacing:.2em;
+	font-size:.8em!important;
+	border-bottom:1px solid black;
+}
+
+.thumbnail{
+	width: 100px;
+    height: 50px;
+	background-size:cover;
+	background-position: center;
 }
